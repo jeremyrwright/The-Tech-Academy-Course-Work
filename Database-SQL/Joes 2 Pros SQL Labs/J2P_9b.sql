@@ -1,0 +1,11 @@
+USE JProCo
+GO
+
+BEGIN TRAN
+
+UPDATE [grant]
+SET Amount = 1
+
+WAITFOR DELAY '00:03:00'
+
+ROLLBACK TRAN
